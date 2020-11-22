@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: EL Toon Crystal Green
+  m_Shader: {fileID: 4800000, guid: 605d1e14bd910db49aa50378eb8e118c, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Albedo:
+        m_Texture: {fileID: 2800000, guid: 7a875ee0f9fb55b4bb9e6e42c095cf5e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask1:
+        m_Texture: {fileID: 2800000, guid: da5d3dd4daeb1c740986a95999b46256, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask2:
+        m_Texture: {fileID: 2800000, guid: 60304423c74d58241a81eeb313b40cc6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _M1AHue: 0.7
+    - _M1ASaturation: 2
+    - _M1AValue: 0.5
+    - _M1BHue: 1.79
+    - _M1BSaturation: 1
+    - _M1BValue: 1
+    - _M1GHue: 1.66
+    - _M1GSaturation: 1
+    - _M1GValue: 1
+    - _M1RHue: 0.34
+    - _M1RSaturation: 1.46
+    - _M1RValue: 1.15
+    - _M2AHue: 0
+    - _M2ASaturation: 1.08
+    - _M2AValue: 1.39
+    - _M2BHue: 1.4
+    - _M2BSaturation: 0.85
+    - _M2BValue: 1
+    - _M2GHue: 1
+    - _M2GSaturation: 1
+    - _M2GValue: 1
+    - _M2RHue: 0.7
+    - _M2RSaturation: 1.18
+    - _M2RValue: 1.38
+    - __dirty: 0
+    m_Colors: []
