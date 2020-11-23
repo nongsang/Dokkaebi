@@ -2040,17 +2040,17 @@ PrefabInstance:
     - target: {fileID: 6624761039724461696, guid: d9e79500f70bfd040b9364d0489f3295,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -150
+      value: -148.7
       objectReference: {fileID: 0}
     - target: {fileID: 6624761039724461696, guid: d9e79500f70bfd040b9364d0489f3295,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.112
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6624761039724461696, guid: d9e79500f70bfd040b9364d0489f3295,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -167.5
+      value: -170.6
       objectReference: {fileID: 0}
     - target: {fileID: 6624761039724461696, guid: d9e79500f70bfd040b9364d0489f3295,
         type: 3}
@@ -5243,10 +5243,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1064054386}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95bd25b96a3464348b65b6ffcd86bc08, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e85dce6b86bc444f80aa35c482ec64c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _collisionTag: Weapon
+  _collisionTag: PlayerWeapon
 --- !u!136 &1064054389
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7761,7 +7761,7 @@ PrefabInstance:
     - target: {fileID: 6517633427528507228, guid: 6444c74d97e19ef45bcb8dd9ba69de16,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -150
+      value: -148.92
       objectReference: {fileID: 0}
     - target: {fileID: 7043735706001591805, guid: 6444c74d97e19ef45bcb8dd9ba69de16,
         type: 3}
@@ -10935,7 +10935,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 110228, guid: 28ee7d66c5b18a64b93436da8089e0ca, type: 3}
       propertyPath: m_TagString
-      value: Weapon
+      value: EnemyWeapon
       objectReference: {fileID: 0}
     - target: {fileID: 466318, guid: 28ee7d66c5b18a64b93436da8089e0ca, type: 3}
       propertyPath: m_LocalPosition.x

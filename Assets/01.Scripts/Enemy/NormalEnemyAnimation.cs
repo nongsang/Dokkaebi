@@ -11,6 +11,7 @@ public class NormalEnemyAnimation : MonoBehaviour
 
     private readonly int hashTrace = Animator.StringToHash("Trace");
     private readonly int hashAttack = Animator.StringToHash("Attack");
+    private readonly int hashLightHit = Animator.StringToHash("LightHit");
     private readonly int hashDie = Animator.StringToHash("Die");
 
     private void Awake()
@@ -47,6 +48,11 @@ public class NormalEnemyAnimation : MonoBehaviour
 
         _anim.SetBool(hashTrace, false);
         _anim.SetTrigger(hashAttack);
+    }
+
+    public void LightHit()
+    {
+        _anim.SetTrigger(hashLightHit);
     }
 
     public void Die()

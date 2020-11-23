@@ -50738,7 +50738,7 @@ GameObject:
   - component: {fileID: 6624761039491982449}
   m_Layer: 0
   m_Name: SM_Wep_Broadsword_01
-  m_TagString: Weapon
+  m_TagString: PlayerWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58948,7 +58948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 301a170a3b773764bb1c7773a47a6c28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _collisionTag: Weapon
+  _collisionTag: EnemyWeapon
 --- !u!114 &6624761039724461697
 MonoBehaviour:
   m_ObjectHideFlags: 0

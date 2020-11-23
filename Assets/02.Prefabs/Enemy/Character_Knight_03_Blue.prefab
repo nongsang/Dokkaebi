@@ -1,114 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!54 &4124250332124201706
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 860305385501230546}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &4124250332124201705
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 860305385501230546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94aa1c79a65d081459c7b11628ea5904, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _damage: 0
---- !u!54 &4124250331719725249
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 861177873771279620}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
---- !u!136 &4124250331719725248
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 861177873771279620}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.25
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
---- !u!195 &1608111745
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 861177873771279620}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 8
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 960
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: -0.1
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!114 &388064165728302153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 861177873771279620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95bd25b96a3464348b65b6ffcd86bc08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collisionTag: Weapon
---- !u!114 &4124250331719725250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 861177873771279620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3445981d799b3e34f993f275829fc944, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _HP: 100
-  _damage: 33
-  _defence: 20
 --- !u!114 &4124250331719725253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,10 +56,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Wep_Broadsword_01
       objectReference: {fileID: 0}
-    - target: {fileID: 131468, guid: f61def225eac3e247985f6679965a655, type: 3}
-      propertyPath: m_TagString
-      value: Weapon
-      objectReference: {fileID: 0}
     - target: {fileID: 465914, guid: f61def225eac3e247985f6679965a655, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.081
@@ -223,21 +110,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 465914, guid: f61def225eac3e247985f6679965a655, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 64370003151808260, guid: f61def225eac3e247985f6679965a655,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 64370003151808260, guid: f61def225eac3e247985f6679965a655,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 64370003151808260, guid: f61def225eac3e247985f6679965a655,
-        type: 3}
-      propertyPath: m_Convex
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -337,10 +209,6 @@ PrefabInstance:
       value: Character_Knight_03_Blue
       objectReference: {fileID: 0}
     - target: {fileID: 1107784990073154, guid: fc0090dd60d993e4384cf6742d8b0fd9, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 1107784990073154, guid: fc0090dd60d993e4384cf6742d8b0fd9, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -409,20 +277,7 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: d538836a24417f6438198920d2ed6652, type: 2}
-    - target: {fileID: 3188936917354776336, guid: fc0090dd60d993e4384cf6742d8b0fd9,
-        type: 3}
-      propertyPath: _audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 71dbd3ec3fc58e142866258180cc954c, type: 3}
-    - target: {fileID: 3188936917354776336, guid: fc0090dd60d993e4384cf6742d8b0fd9,
-        type: 3}
-      propertyPath: _behaviours.Array.data[0]
-      value: Attack
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7810531762644123667, guid: fc0090dd60d993e4384cf6742d8b0fd9, type: 3}
-    - {fileID: 5743524497755773112, guid: fc0090dd60d993e4384cf6742d8b0fd9, type: 3}
-    - {fileID: 3188936917354776336, guid: fc0090dd60d993e4384cf6742d8b0fd9, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc0090dd60d993e4384cf6742d8b0fd9, type: 3}
 --- !u!1 &861177873771279620 stripped
 GameObject:

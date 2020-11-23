@@ -49,7 +49,8 @@ MonoBehaviour:
   _mainCamera: {fileID: 0}
   _collisionTags:
   - Player
-  - Weapon
+  - PlayerWeapon
+  - EnemyWeapon
   - Event
   _offsetHeight: 1.8
   _minDistance: 1
