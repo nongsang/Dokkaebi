@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerCtrl : MonoBehaviour
 {
     private Transform _tr = null;
-    private CharacterController _cc = null;
     private PlayerStatus _playerStatus = null;
     private PlayerMovement _playerMovement = null;
     private PlayerBattle _playerBattle = null;
@@ -50,7 +49,6 @@ public class PlayerCtrl : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
 
         _tr = GetComponent<Transform>();
-        _cc = GetComponent<CharacterController>();
         _playerStatus = GetComponent<PlayerStatus>();
         _playerMovement = GetComponent<PlayerMovement>();
         _playerBattle = GetComponent<PlayerBattle>();
@@ -62,9 +60,9 @@ public class PlayerCtrl : MonoBehaviour
     {
         if (!_playerStatus.isDie)
         {
+            GetInputRotate();
             GetInputMove();
             _playerMovement.MovePlayer(_moveDir, _rotateDir, _isAction, _isBlock);
-            GetInputRotate();
             GetInputBattle();
             GetInputUseItem();
             GetInputInteraction();
@@ -73,7 +71,7 @@ public class PlayerCtrl : MonoBehaviour
 
     private void LateUpdate()
     {
-        _playerMovement.RotateCharacter(_rotateY);
+        _playerMovement.RotateCharacter(_mouseMoveDir);
     }
 
     private void GetInputMove()

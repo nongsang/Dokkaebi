@@ -10,7 +10,7 @@ public class PlayerInjure : MonoBehaviour
     public delegate void PlayerDieHandler();
     public static event PlayerDieHandler OnPlayerDie;
 
-    [SerializeField] private string _collisionTag = "Weapon";
+    [SerializeField] private string _collisionTag = "EnemyWeapon";
 
     private void Start()
     {
@@ -22,30 +22,20 @@ public class PlayerInjure : MonoBehaviour
     {
         if (other.CompareTag(_collisionTag))
         {
-            float damage = other.GetComponent<EnemyWeaponCtrl>().damage - _playerStatus.defence;
-
-            if(damage < 0.0f)
-            {
-                damage = 0.0f;
-            }
-
-            _playerStatus.HP -= damage;
-            GameManager.instance.playerData.HP = _playerStatus.HP;
-
-            PlayerUICtrl.UI.SetHPBar(_playerStatus.HP, _playerStatus.maxHP);
+            // ...
 
             if (_playerStatus.HP <= 0.0f)
             {
                 _playerStatus.isDie = true;
                 _playerAnimation.Die();
-                PlayerDie();
+                GetComponent<Collider>().enabled = false;
+                PlayerDieEvent();
             }
         }
     }
 
-    private void PlayerDie()
+    private void PlayerDieEvent()
     {
-        GetComponent<Collider>().enabled = false;
         OnPlayerDie();
     }
 }

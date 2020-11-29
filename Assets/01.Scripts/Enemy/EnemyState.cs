@@ -12,7 +12,6 @@ public class EnemyState : MonoBehaviour
     public bool isDie { get => _isDie; set => _isDie = value; }
 
     private Transform _tr = null;
-    public Transform tr { get => _tr; }
     private Transform _targetTr = null;
     public Transform targetTr { get => _targetTr; }
 
@@ -20,11 +19,11 @@ public class EnemyState : MonoBehaviour
     [SerializeField] private float _traceDist = 5.0f;
 
     private WaitForSeconds ws = null;
-    [SerializeField] private float _time = 0.0625f;
+    [SerializeField] private float _repeatTime = 0.125f;
 
     private void Awake()
     {
-        ws = new WaitForSeconds(_time);
+        ws = new WaitForSeconds(_repeatTime);
 
         _tr = GetComponent<Transform>();
         _targetTr = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -50,11 +49,11 @@ public class EnemyState : MonoBehaviour
 
             float dist = Vector3.Distance(_targetTr.position, _tr.position);
 
-            if( dist <= _attackDist)
+            if (dist <= _attackDist)
             {
                 _state = State.ATTACK;
             }
-            else if(dist <= _traceDist)
+            else if (dist <= _traceDist)
             {
                 _state = State.TRACE;
             }

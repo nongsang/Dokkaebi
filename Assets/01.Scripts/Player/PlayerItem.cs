@@ -5,9 +5,8 @@ using UnityEngine;
 public class PlayerItem : MonoBehaviour
 {
     private PlayerStatus _playerStatus = null;
-    private AudioSource _audioSource = null;
-    [SerializeField] private AudioClip _healSound = null;
-    [SerializeField] private ParticleSystem _healEffect = null;
+    private PlayerSound _playerSound = null;
+    [SerializeField] private ParticleSystem _recoveryEffect = null;
 
     public enum Item { HPPosion };
     [SerializeField] private Item _item = Item.HPPosion;
@@ -18,10 +17,10 @@ public class PlayerItem : MonoBehaviour
     private void Start()
     {
         _playerStatus = GetComponent<PlayerStatus>();
-        _audioSource = GetComponent<AudioSource>();
+        _playerSound = GetComponent<PlayerSound>();
         _currHPPosionCnt = GameManager.instance.playerData.HPPosionCnt;
         PlayerUICtrl.UI.SetItemCnt(_currHPPosionCnt);
-        _healEffect.Stop();
+        _recoveryEffect.Stop();
     }
 
     public void UseItem()
@@ -29,7 +28,6 @@ public class PlayerItem : MonoBehaviour
         switch(_item)
         {
             case Item.HPPosion:
-                _healEffect.Play();
                 UseHPPosion();
                 break;
         }
@@ -52,10 +50,10 @@ public class PlayerItem : MonoBehaviour
                 _playerStatus.HP += 50.0f;
             }
 
+            HealSfx();
+
             PlayerUICtrl.UI.SetHPBar(_playerStatus.HP, _playerStatus.maxHP);
             PlayerUICtrl.UI.SetItemCnt(_currHPPosionCnt);
-
-            HealSfx();
 
             GameManager.instance.playerData.HP = _playerStatus.HP;
         }
@@ -63,6 +61,7 @@ public class PlayerItem : MonoBehaviour
 
     private void HealSfx()
     {
-        _audioSource.PlayOneShot(_healSound);
+        _recoveryEffect.Play();
+        _playerSound.PlaySound("Recovery");
     }
 }

@@ -10,10 +10,8 @@ public class NormalEnemy: MonoBehaviour
     private EnemyState _enemyState = null;
     private NormalEnemyAnimation _normalEnemyAnimation = null;
 
-    [SerializeField] private GameObject _enemyWeapon = null;
-
     private WaitForSeconds ws = null;
-    [SerializeField] private float _time = 0.0625f;
+    [SerializeField] private float _repeatTime = 0.125f;
 
     private void Awake()
     {
@@ -21,7 +19,7 @@ public class NormalEnemy: MonoBehaviour
         _enemyState = GetComponent<EnemyState>();
         _normalEnemyAnimation = GetComponent<NormalEnemyAnimation>();
 
-        ws = new WaitForSeconds(_time);
+        ws = new WaitForSeconds(_repeatTime);
     }
 
     private void OnEnable()

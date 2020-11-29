@@ -40,8 +40,8 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void RotateCharacter(float rotateY)
+    public void RotateCharacter(Vector2 rotateDir)
     {
-        _cc.transform.rotation = Quaternion.Euler(0.0f, rotateY, 0.0f);
+        _cc.transform.rotation = Quaternion.Euler(0.0f, rotateDir.y, 0.0f);
     }
 }
