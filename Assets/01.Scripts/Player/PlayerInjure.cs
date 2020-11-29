@@ -22,7 +22,17 @@ public class PlayerInjure : MonoBehaviour
     {
         if (other.CompareTag(_collisionTag))
         {
-            // ...
+            float damage = other.GetComponent<EnemyWeaponCtrl>().damage - _playerStatus.defence;
+
+            if (damage < 0.0f)
+            {
+                damage = 0.0f;
+            }
+
+            _playerStatus.HP -= damage;
+            GameManager.instance.playerData.HP = _playerStatus.HP;
+
+            PlayerUICtrl.UI.SetHPBar(_playerStatus.HP, _playerStatus.maxHP);
 
             if (_playerStatus.HP <= 0.0f)
             {
