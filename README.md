@@ -11,3 +11,4 @@ Target Platform : Windows PC
 
 스크린샷
 =============
+![Alt text](C:\Users\nongsang\Videos\Captures\Dokkaebi0.png)
