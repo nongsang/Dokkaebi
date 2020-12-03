@@ -11,4 +11,4 @@ Target Platform : Windows PC
 
 스크린샷
 =============
-<img src="C:\Users\nongsang\Videos\Captures\Dokkaebi0.png" width="450px" height="300px" title="px(픽셀) 크기 설정" alt="RubberDuck"></img><br/>
+![Dokkaebi0](https://user-images.githubusercontent.com/21985507/101010001-84dec500-35a5-11eb-95d8-52786ef64b96.png)
