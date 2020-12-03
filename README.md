@@ -4,8 +4,8 @@
 
 개발환경
 =============
-OS: Windows 10 64bit
-Engine: Unity 2019.4.13f1
+OS: Windows 10 64bit  
+Engine: Unity 2019.4.13f1 
 
 클래스 설명
 =============
