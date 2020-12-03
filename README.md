@@ -9,8 +9,5 @@ Engine: Unity 2019.4.13f1
 IDE: Microsoft Visual Studio 2019  
 Target Platform : Windows PC  
 
-클래스 설명
-=============
-
 스크린샷
 =============
