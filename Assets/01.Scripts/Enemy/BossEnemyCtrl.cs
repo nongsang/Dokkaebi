@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(EnemyState))]
-public class BossEnemy : MonoBehaviour
+public class BossEnemyCtrl : MonoBehaviour
 {
     private NavMeshAgent _agent = null;
     private EnemyState _enemyState = null;
